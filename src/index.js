@@ -107,7 +107,7 @@ class App extends React.Component {
 
   removeBook = (book) => {
     const updateBooks = this.state.books.filter(function (item) {
-      return item.id != book.id;
+      return item.id !== book.id;
     });
     console.log(updateBooks);
     this.setState({
@@ -159,13 +159,13 @@ function Header(props) {
   );
 }
 
-function Hello() {
-  return (
-    <div>
-      <h1 style={{ color: "red" }}>Hello, world!</h1>;
-      <h2>{booksData[0].name}</h2>
-    </div>
-  );
-}
+// function Hello() {
+//   return (
+//     <div>
+//       <h1 style={{ color: "red" }}>Hello, world!</h1>;
+//       <h2>{booksData[0].name}</h2>
+//     </div>
+//   );
+// }
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
